@@ -31,7 +31,7 @@ export class RecipeListComponent{
       this.searchControl.valueChanges.subscribe(searchTerm => {
         if (searchTerm) {
           this.recipeList = this.allList.filter(item =>
-            item.name.includes(searchTerm)
+            item.name.toLowerCase().includes(searchTerm.toLowerCase())
           );
         } else {
           this.recipeList = [...this.allList];
