@@ -10,9 +10,9 @@ export class RecipeService {
   constructor(private http: HttpClient) {}
 
   getAllRecipes(){
-    return this.http.get<Recipe[]>("http://localhost:4200/cockails")
+    return this.http.get<Recipe[]>("/cockails")
   }
   getRecipe(id: string){
-    return this.http.get<Recipe>("http://localhost:4200/cockails/"+id)
+    return this.http.get<Recipe>("/cockails/"+id)
   }
 }
